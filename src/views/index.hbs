@@ -1,0 +1,104 @@
+ <!--Nav-->
+        <nav>
+            <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        {{#if user}}
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
+            <li class="active"><a href="/">Inicio</a></li>
+            <li><a href="chat">Mensajes</a></li>
+            <li><a href="historial">Historial de Mensajes</a></li>
+            <li><a href="login">Salir({{user.username}})</a></li>
+          </ul>
+        </div>
+      </div>
+        {{else}}
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right" style="display: inline-block;">
+            <li class="active"><a href="/">Inicio</a></li>
+            <li><a href="register">Cursos</a></li>
+            <li><a href="login">Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+    </nav>
+    <!--Header-->
+<header>
+    <section id="header">
+      <div class="container">
+        <div class="row header-text">
+          <div class="col-sm-8 pull-right text-right">
+           <div class="margin-100">
+            <h1>Ket Kuepa</h1>
+            <h3>PRUEBA DESARROLLADOR FULL STACK JAVASCRIPT</h3>
+           </div>
+            <a href="#" class="btn btn-primary btn-lg">Registrarme</a>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-4 text-center wow fadeInUp">
+            <img class="header-img" src="img/header1.png" alt="Header Image">
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    </header>
+    <!--Main 1-->
+    <section id="main1">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 margin-30">
+            <h2>Neider Andres Pandales Renteria</h2><br />
+            <p>. </p><br />
+            <blockquote>
+              Soy estudiante de ingeniería de sistemas de 9º semestre y técnico en instalación de redes con experiencia en desarrollo web y móvil en diferentes lenguajes y frameworks de programación. También cuento con experiencia en soporte y mantenimiento técnico para computadores e impresoras, instalación de redes, cctv y servidores.
+Soy una persona activa, emprendedora, comprometida y capaz de lograr lo que se propone, deseo cumplir con las actividades que se desarrollen en mi ambiente laboral, me gusta interactuar con las personas y así conformar un buen grupo de trabajo dando opiniones y respetando otros puntos de vista. Soy además muy perseverante, me gusta aportar 
+            </blockquote>
+            <br />
+            <a href="#" class="btn btn-secondary btn-lg">napandalesr@gmail.com <i class="fa fa-envelope"></i></a>
+          </div>
+          
+          <div class="col-sm-6 wow fadeInUpBig">
+            <img class="main1-img img-responsive pull-right" src="img/main1.jpg" alt="Main1 Image">
+          </div>
+        </div>
+      </div>
+    </section>
+        
+        <main class="row m-5 pt-5" style="height: 600px;">
+            {{#if success}}
+            <div class="container">
+                <div class="col-md-4 mx-auto">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{success}}
+                        <Button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{#if err}}
+            <div class="container">
+                <div class="col-md-4 mx-auto">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{err}}
+                        <Button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
